@@ -16,8 +16,22 @@ function chooseStudent() {
 // "Ladan was selected to present her exercises"
 // function name: displaySelectedStudent(student, language) language: "de" or "en"
 
-function displaySelectedStudent(student) {
-  console.log(student);
+let student = chooseStudent();
+
+function displaySelectedStudent(student, language) {
+  switch (language) {
+    case "de":
+      console.log(`Zur Präsentation der Aufgaben wurde ${student} ausgewählt`);
+      break;
+    case "ru":
+      console.log(`${student} был выбран для демонстрации упражнений`);
+      break;
+    default:
+      console.log(`${student} was selected to present her exercises`);
+      break;
+  }
 }
 
-displaySelectedStudent(chooseStudent());
+displaySelectedStudent(student, "en");
+displaySelectedStudent(student, "ru");
+displaySelectedStudent(student, "de");
