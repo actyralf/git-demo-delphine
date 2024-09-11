@@ -6,13 +6,17 @@ const students = ["Saleh", "Ladan", "Can"];
 let student = "Stacy";
 
 function displaySelectedStudent(student, language) {
-  if (language === "de") {
-    console.log(`Zur Präsentation der Aufgaben wurde ${student} ausgewählt`);
-  } else if (language === "ru") {
-    console.log(`${student} был выбран для демонстрации упражнений`);
-  } else {
-    console.log(`${student} was selected to present her exercises`);
+  switch (language) {
+    case "de":
+      console.log(`Zur Präsentation der Aufgaben wurde ${student} ausgewählt`);
+      break;
+    case "ru":
+      console.log(`${student} был выбран для демонстрации упражнений`);
+      break;
+    default:
+      console.log(`${student} was selected to present her exercises`);
+      break;
   }
 }
 
-displaySelectedStudent(student, "de");
+displaySelectedStudent(student, "en");
